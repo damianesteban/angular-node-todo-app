@@ -51,7 +51,7 @@
         Todo.create({
           text: req.body.text,
           done: false
-        }, function(err, todos) {
+        }, function(err, todo) {
             if (err)
                 res.send(err);
 
@@ -69,7 +69,7 @@
     app.delete('/api/todos/:todo_id', function(req, res) {
         Todo.remove({
           _id: req.params.todo_id
-        }, function(err, todos) {
+        }, function(err, todo) {
             if (err)
                 res.send(err)
 
@@ -82,6 +82,11 @@
         });
     });
 
+    // application-----------------------
+    app.get('*', function(req, res) {
+        res.sendfile('./public/index.html');  // load the single view file (angular will handle the
+                                              // the page changes on the front-end
+    })
     // listen (start app with node server.js) ==================================
     app.listen(8080);
     console.log("App listening on port 8080");
