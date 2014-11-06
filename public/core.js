@@ -7,7 +7,7 @@
 // public/core.js
 var scotchTodo = angular.module('scotchTodo', []);
 
-function = mainController($scope, $http) {
+function mainController($scope, $http) {
     $scope.formData = {};
 
     // when loading on the page, get all todos and show them
@@ -36,7 +36,7 @@ function = mainController($scope, $http) {
 
     // delete a todo after checking it.
     $scope.deleteTodo = function(id) {
-        $http.delete('/api/todos' + id)
+        $http.delete('/api/todos/' + id)
             .success(function(data) {
                 $scope.todos = data;
                 console.log(data);

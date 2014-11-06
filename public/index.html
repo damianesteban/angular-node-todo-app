@@ -11,7 +11,7 @@
   <title>Node and Angular Todo App</title>
 
   <!-- SCROLLS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
   <!-- some quick inline-styling -->
    <style>
         html                    { overflow-y:scroll; }
@@ -20,8 +20,8 @@
     </style>
 
     <!-- SPELLS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
     <script src="core.js"></script>
 
 </head>
@@ -31,7 +31,7 @@
 
     <!-- HEADER AND TODO COUNT -->
     <div class="jumbotron text-center">
-      <h1>I'm a Todo-aholic <span class="label label-info">{{ todos.length }}</span></h1>
+      <h1>I'm a Todo-aholic <span class="label label-info"> {{ todos.length }} </span></h1>
     </div>
 
     <!-- TODO LIST -->
@@ -41,7 +41,7 @@
         <!-- LOOP OVER THE TODOS in $scope.todos -->
         <div class="checkbox" ng-repeat="todo in todos">
           <label>
-            <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text}} </label>
+            <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }} </label>
           </div>
       </div>
 
@@ -55,7 +55,7 @@
 
             <!-- BIND THIS VALUE to formData.text IN ANGULAR -->
             <input type="text" class="form-control input-lg text-center"
-              placeholder="I want to buy a puppy." ng-model="formData.txt">
+              placeholder="I want to buy a puppy." ng-model="formData.text">
           </div>
 
           <!-- createToDo() WILL CREATE NEW TODOS -->
