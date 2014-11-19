@@ -1,3 +1,4 @@
 # README
 
-This repository has code from the tutorial [*Creating a Single Page To-do App with Node and Angular*](http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular).
+This repository contains the final iteration of the code from the
+[Node and Angular To Do Application Series on scotch.io](http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-controllers-and-services) 
